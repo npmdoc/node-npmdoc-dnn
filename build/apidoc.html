@@ -1,0 +1,4631 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/junku901/dnn#readme"
+
+    >dnn (v0.1.0)</a>
+</h1>
+<h4>Deep learning library for Node.js. (includes MLP, RBM, DBN, CRBM, CDBN)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn">module dnn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CDBN">
+            function <span class="apidocSignatureSpan">dnn.</span>CDBN
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM">
+            function <span class="apidocSignatureSpan">dnn.</span>CRBM
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN">
+            function <span class="apidocSignatureSpan">dnn.</span>DBN
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer">
+            function <span class="apidocSignatureSpan">dnn.</span>HiddenLayer
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression">
+            function <span class="apidocSignatureSpan">dnn.</span>LogisticRegression
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP">
+            function <span class="apidocSignatureSpan">dnn.</span>MLP
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM">
+            function <span class="apidocSignatureSpan">dnn.</span>RBM
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>CRBM.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>DBN.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>HiddenLayer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>LogisticRegression.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>MLP.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>RBM.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.</span>math</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.CRBM">module dnn.CRBM</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM.CRBM">
+            function <span class="apidocSignatureSpan">dnn.</span>CRBM
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.CRBM.prototype">module dnn.CRBM.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM.prototype.getReconstructionCrossEntropy">
+            function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>getReconstructionCrossEntropy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM.prototype.propdown">
+            function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>propdown
+            <span class="apidocSignatureSpan">(h)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM.prototype.reconstruct">
+            function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>reconstruct
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.CRBM.prototype.sampleVgivenH">
+            function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>sampleVgivenH
+            <span class="apidocSignatureSpan">(h0_sample)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>W</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>hbias</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>vbias</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.DBN">module dnn.DBN</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.DBN">
+            function <span class="apidocSignatureSpan">dnn.</span>DBN
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.DBN.prototype">module dnn.DBN.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.prototype.finetune">
+            function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>finetune
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.prototype.getReconstructionCrossEntropy">
+            function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>getReconstructionCrossEntropy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.prototype.predict">
+            function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>predict
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.prototype.pretrain">
+            function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>pretrain
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.DBN.prototype.set">
+            function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>set
+            <span class="apidocSignatureSpan">(property, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.HiddenLayer">module dnn.HiddenLayer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer.HiddenLayer">
+            function <span class="apidocSignatureSpan">dnn.</span>HiddenLayer
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.HiddenLayer.prototype">module dnn.HiddenLayer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer.prototype.backPropagate">
+            function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>backPropagate
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer.prototype.linearOutput">
+            function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>linearOutput
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer.prototype.output">
+            function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>output
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.HiddenLayer.prototype.sampleHgivenV">
+            function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>sampleHgivenV
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.LogisticRegression">module dnn.LogisticRegression</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression.LogisticRegression">
+            function <span class="apidocSignatureSpan">dnn.</span>LogisticRegression
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.LogisticRegression.prototype">module dnn.LogisticRegression.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression.prototype.getReconstructionCrossEntropy">
+            function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>getReconstructionCrossEntropy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression.prototype.predict">
+            function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>predict
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression.prototype.set">
+            function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>set
+            <span class="apidocSignatureSpan">(property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.LogisticRegression.prototype.train">
+            function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>train
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.MLP">module dnn.MLP</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP.MLP">
+            function <span class="apidocSignatureSpan">dnn.</span>MLP
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.MLP.prototype">module dnn.MLP.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP.prototype.getReconstructionCrossEntropy">
+            function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>getReconstructionCrossEntropy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP.prototype.predict">
+            function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>predict
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP.prototype.set">
+            function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>set
+            <span class="apidocSignatureSpan">(property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.MLP.prototype.train">
+            function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>train
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.RBM">module dnn.RBM</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.RBM">
+            function <span class="apidocSignatureSpan">dnn.</span>RBM
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.RBM.prototype">module dnn.RBM.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.getReconstructionCrossEntropy">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>getReconstructionCrossEntropy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.gibbsHVH">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>gibbsHVH
+            <span class="apidocSignatureSpan">(h0_sample)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.propdown">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>propdown
+            <span class="apidocSignatureSpan">(h)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.propup">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>propup
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.reconstruct">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>reconstruct
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.sampleHgivenV">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>sampleHgivenV
+            <span class="apidocSignatureSpan">(v0_sample)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.sampleVgivenH">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>sampleVgivenH
+            <span class="apidocSignatureSpan">(h0_sample)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.set">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>set
+            <span class="apidocSignatureSpan">(property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.RBM.prototype.train">
+            function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>train
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnn.math">module dnn.math</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.activateMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>activateMat
+            <span class="apidocSignatureSpan">(mat, activation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.activateTwoMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>activateTwoMat
+            <span class="apidocSignatureSpan">(mat1, mat2, activation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.activateTwoVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>activateTwoVec
+            <span class="apidocSignatureSpan">(vec1, vec2, activation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.activateVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>activateVec
+            <span class="apidocSignatureSpan">(vec, activation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.addMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>addMat
+            <span class="apidocSignatureSpan">(mat1, mat2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.addMatScalar">
+            function <span class="apidocSignatureSpan">dnn.math.</span>addMatScalar
+            <span class="apidocSignatureSpan">(mat, scalar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.addMatVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>addMatVec
+            <span class="apidocSignatureSpan">(mat, vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.addVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>addVec
+            <span class="apidocSignatureSpan">(vec1, vec2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.dSigmoid">
+            function <span class="apidocSignatureSpan">dnn.math.</span>dSigmoid
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.dotVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>dotVec
+            <span class="apidocSignatureSpan">(vec1, vec2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.fillMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>fillMat
+            <span class="apidocSignatureSpan">(row, col, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.fillVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>fillVec
+            <span class="apidocSignatureSpan">(n, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.identity">
+            function <span class="apidocSignatureSpan">dnn.math.</span>identity
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.maxMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>maxMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.maxVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>maxVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.meanMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>meanMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.meanMatAxis">
+            function <span class="apidocSignatureSpan">dnn.math.</span>meanMatAxis
+            <span class="apidocSignatureSpan">(mat, axis)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.meanVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>meanVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.minMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>minMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.minVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>minVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.minusMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>minusMat
+            <span class="apidocSignatureSpan">(mat1, mat2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.minusMatVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>minusMatVec
+            <span class="apidocSignatureSpan">(mat, vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.minusVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>minusVec
+            <span class="apidocSignatureSpan">(vec1, vec2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.mulMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>mulMat
+            <span class="apidocSignatureSpan">(mat1, mat2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.mulMatElementWise">
+            function <span class="apidocSignatureSpan">dnn.math.</span>mulMatElementWise
+            <span class="apidocSignatureSpan">(mat1, mat2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.mulMatScalar">
+            function <span class="apidocSignatureSpan">dnn.math.</span>mulMatScalar
+            <span class="apidocSignatureSpan">(mat, scalar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.mulVecScalar">
+            function <span class="apidocSignatureSpan">dnn.math.</span>mulVecScalar
+            <span class="apidocSignatureSpan">(vec, scalar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.oneMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>oneMat
+            <span class="apidocSignatureSpan">(row, col)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.oneVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>oneVec
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.outerVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>outerVec
+            <span class="apidocSignatureSpan">(vec1, vec2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.probToBinaryMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>probToBinaryMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.randMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>randMat
+            <span class="apidocSignatureSpan">(row, col, lower, upper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.randVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>randVec
+            <span class="apidocSignatureSpan">(n, lower, upper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.randn">
+            function <span class="apidocSignatureSpan">dnn.math.</span>randn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.randnMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>randnMat
+            <span class="apidocSignatureSpan">(row, col, mean, sigma)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.randnVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>randnVec
+            <span class="apidocSignatureSpan">(n, mean, sigma)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.shape">
+            function <span class="apidocSignatureSpan">dnn.math.</span>shape
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.sigmoid">
+            function <span class="apidocSignatureSpan">dnn.math.</span>sigmoid
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.softmaxMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>softmaxMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.softmaxVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>softmaxVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.squareMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>squareMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.squareVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>squareVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.sumMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>sumMat
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.sumMatAxis">
+            function <span class="apidocSignatureSpan">dnn.math.</span>sumMatAxis
+            <span class="apidocSignatureSpan">(mat, axis)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.sumVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>sumVec
+            <span class="apidocSignatureSpan">(vec)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.transpose">
+            function <span class="apidocSignatureSpan">dnn.math.</span>transpose
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.zeroMat">
+            function <span class="apidocSignatureSpan">dnn.math.</span>zeroMat
+            <span class="apidocSignatureSpan">(row, col)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnn.math.zeroVec">
+            function <span class="apidocSignatureSpan">dnn.math.</span>zeroVec
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn" id="apidoc.module.dnn">module dnn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CDBN" id="apidoc.element.dnn.CDBN">
+        function <span class="apidocSignatureSpan">dnn.</span>CDBN
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CDBN = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.sigmoidLayers = [];
+    self.rbmLayers = [];
+    self.nLayers = settings[&#x27;hidden_layer_sizes&#x27;].length;
+    self.hiddenLayerSizes = settings[&#x27;hidden_layer_sizes&#x27;];
+    self.nIns = settings[&#x27;n_ins&#x27;];
+    self.nOuts = settings[&#x27;n_outs&#x27;];
+
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+    // Constructing Deep Neural Network
+    var i;
+    for(i=0 ; i&#x3c;self.nLayers ; i++) {
+        var inputSize, layerInput;
+        if(i == 0)
+            inputSize = settings[&#x27;n_ins&#x27;];
+        else
+            inputSize = settings[&#x27;hidden_layer_sizes&#x27;][i-1];
+
+        if(i == 0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV();
+
+        var sigmoidLayer = new HiddenLayer({
+            &#x27;input&#x27; : layerInput,
+            &#x27;n_in&#x27; : inputSize,
+            &#x27;n_out&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+            &#x27;activation&#x27; : math.sigmoid
+        });
+        self.sigmoidLayers.push(sigmoidLayer);
+
+        var rbmLayer;
+        if(i==0) {
+            rbmLayer = new CRBM({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_visible&#x27; : inputSize,
+                &#x27;n_hidden&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+            });
+        } else {
+            rbmLayer = new RBM({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_visible&#x27; : inputSize,
+                &#x27;n_hidden&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i]
+            });
+        }
+        self.rbmLayers.push(rbmLayer);
+    }
+    self.outputLayer = new HiddenLayer({
+        &#x27;input&#x27; : self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV(),
+        &#x27;n_in&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][settings[&#x27;hidden_layer_sizes&#x27;].length - 1],
+        &#x27;n_out&#x27; : settings[&#x27;n_outs&#x27;],
+        &#x27;activation&#x27; : math.sigmoid
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var y = [[1, 0],
+         [1, 0],
+         [1, 0],
+         [0, 1],
+         [0, 1],
+         [0, 1]];
+
+var cdbn = new dnn.<span class="apidocCodeKeywordSpan">CDBN</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_ins&#x27; : 6,
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [10,12,11,8,6,4]
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM" id="apidoc.element.dnn.CRBM">
+        function <span class="apidocSignatureSpan">dnn.</span>CRBM
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CRBM = function (settings) {
+    RBM.call(this,settings);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var data = [[0.4, 0.5, 0.5, 0.,  0.,  0.7],
+            [0.5, 0.3,  0.5, 0.,  1,  0.6],
+            [0.4, 0.5, 0.5, 0.,  1,  0.9],
+            [0.,  0.,  0., 0.3, 0.5, 0.],
+            [0.,  0.,  0., 0.4, 0.5, 0.],
+            [0.,  0.,  0., 0.5, 0.5, 0.]];
+
+var crbm = new dnn.<span class="apidocCodeKeywordSpan">CRBM</span>({
+    input : data,
+    n_visible : 6,
+    n_hidden : 5
+});
+
+crbm.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN" id="apidoc.element.dnn.DBN">
+        function <span class="apidocSignatureSpan">dnn.</span>DBN
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DBN = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.sigmoidLayers = [];
+    self.rbmLayers = [];
+    self.nLayers = settings[&#x27;hidden_layer_sizes&#x27;].length;
+    self.hiddenLayerSizes = settings[&#x27;hidden_layer_sizes&#x27;];
+    self.nIns = settings[&#x27;n_ins&#x27;];
+    self.nOuts = settings[&#x27;n_outs&#x27;];
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+
+    // Constructing Deep Neural Network
+    var i;
+    for(i=0 ; i&#x3c;self.nLayers ; i++) {
+        var inputSize, layerInput;
+        if(i == 0)
+            inputSize = settings[&#x27;n_ins&#x27;];
+        else
+            inputSize = settings[&#x27;hidden_layer_sizes&#x27;][i-1];
+
+        if(i == 0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV();
+
+        var sigmoidLayer = new HiddenLayer({
+            &#x27;input&#x27; : layerInput,
+            &#x27;n_in&#x27; : inputSize,
+            &#x27;n_out&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+            &#x27;activation&#x27; : math.sigmoid
+        });
+        self.sigmoidLayers.push(sigmoidLayer);
+
+        var rbmLayer = new RBM({
+            &#x27;input&#x27; : layerInput,
+            &#x27;n_visible&#x27; : inputSize,
+            &#x27;n_hidden&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i]
+        });
+        self.rbmLayers.push(rbmLayer);
+    }
+    self.outputLayer = new HiddenLayer({
+        &#x27;input&#x27; : self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV(),
+        &#x27;n_in&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][settings[&#x27;hidden_layer_sizes&#x27;].length - 1],
+        &#x27;n_out&#x27; : settings[&#x27;n_outs&#x27;],
+        &#x27;activation&#x27; : math.sigmoid
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+         [1, 0],
+         [0, 1],
+         [0, 1],
+         [0, 1]];
+
+var pretrain_lr = 0.6, pretrain_epochs = 900, k = 1, finetune_lr = 0.6, finetune_epochs = 500;
+
+var dbn = new dnn.<span class="apidocCodeKeywordSpan">DBN</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_ins&#x27; : 6,
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [10,12,11,8,6,4]
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer" id="apidoc.element.dnn.HiddenLayer">
+        function <span class="apidocSignatureSpan">dnn.</span>HiddenLayer
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HiddenLayer = function (settings) {
+    var self = this;
+    self.input = settings[&#x27;input&#x27;];
+
+    if(typeof settings[&#x27;W&#x27;] === &#x27;undefined&#x27;) {
+        var a = 1. / settings[&#x27;n_in&#x27;];
+        settings[&#x27;W&#x27;] = math.randMat(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;],-a,a);
+    }
+    if(typeof settings[&#x27;b&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;b&#x27;] = math.zeroVec(settings[&#x27;n_out&#x27;]);
+    if(typeof settings[&#x27;activation&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;activation&#x27;] = math.sigmoid;
+
+    self.W = settings[&#x27;W&#x27;];
+    self.b = settings[&#x27;b&#x27;];
+    self.activation = settings[&#x27;activation&#x27;];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression" id="apidoc.element.dnn.LogisticRegression">
+        function <span class="apidocSignatureSpan">dnn.</span>LogisticRegression
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LogisticRegression = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.W = math.zeroMat(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;]);
+    self.b = math.zeroVec(settings[&#x27;n_out&#x27;]);
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var y = [[1, 0],
+         [1, 0],
+         [1, 0],
+         [0, 1],
+         [0, 1],
+         [0, 1]];
+
+var lrClassifier = new dnn.<span class="apidocCodeKeywordSpan">LogisticRegression</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP" id="apidoc.element.dnn.MLP">
+        function <span class="apidocSignatureSpan">dnn.</span>MLP
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MLP = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.sigmoidLayers = [];
+    self.nLayers = settings[&#x27;hidden_layer_sizes&#x27;].length;
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+    var i;
+    for(i=0 ; i&#x3c;self.nLayers+1 ; i++) {
+        var inputSize, layerInput;
+        if(i == 0)
+            inputSize = settings[&#x27;n_ins&#x27;];
+        else
+            inputSize = settings[&#x27;hidden_layer_sizes&#x27;][i-1];
+
+        if(i == 0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV();
+
+        var sigmoidLayer;
+        if(i == self.nLayers) {
+            sigmoidLayer = new HiddenLayer({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_in&#x27; : inputSize,
+                &#x27;n_out&#x27; : settings[&#x27;n_outs&#x27;],
+                &#x27;activation&#x27; : math.sigmoid,
+                &#x27;W&#x27; : (typeof settings[&#x27;w_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;w_array&#x27;][i],
+                &#x27;b&#x27; : (typeof settings[&#x27;b_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;b_array&#x27;][i]
+            });
+        } else {
+            sigmoidLayer = new HiddenLayer({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_in&#x27; : inputSize,
+                &#x27;n_out&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+                &#x27;activation&#x27; : math.sigmoid,
+                &#x27;W&#x27; : (typeof settings[&#x27;w_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;w_array&#x27;][i],
+                &#x27;b&#x27; : (typeof settings[&#x27;b_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;b_array&#x27;][i]
+            });
+        }
+        self.sigmoidLayers.push(sigmoidLayer);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var y =  [[1, 0],
+          [1, 0],
+          [1, 0],
+          [0, 1],
+          [0, 1],
+          [0, 1]];
+
+var mlp = new dnn.<span class="apidocCodeKeywordSpan">MLP</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_ins&#x27; : 6,
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [4,4,5]
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM" id="apidoc.element.dnn.RBM">
+        function <span class="apidocSignatureSpan">dnn.</span>RBM
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RBM = function (settings) {
+    var self = this;
+
+    self.nVisible = settings[&#x27;n_visible&#x27;];
+    self.nHidden = settings[&#x27;n_hidden&#x27;];
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+
+    if(typeof settings[&#x27;W&#x27;] === &#x27;undefined&#x27;) {
+        var a = 1. / self.nVisible;
+        settings[&#x27;W&#x27;] = math.randMat(self.nVisible,self.nHidden,-a,a);
+    }
+
+    if(typeof settings[&#x27;hbias&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;hbias&#x27;] = math.zeroVec(self.nHidden);
+
+    if(typeof settings[&#x27;vbias&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;vbias&#x27;] = math.zeroVec(self.nVisible);
+
+    self.input = settings[&#x27;input&#x27;];
+    self.W = settings[&#x27;W&#x27;];
+    self.hbias = settings[&#x27;hbias&#x27;];
+    self.vbias = settings[&#x27;vbias&#x27;];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var data = [[1,1,1,0,0,0],
+            [1,0,1,0,0,0],
+            [1,1,1,0,0,0],
+            [0,0,1,1,1,0],
+            [0,0,1,1,0,0],
+            [0,0,1,1,1,0]];
+
+var rbm = new dnn.<span class="apidocCodeKeywordSpan">RBM</span>({
+    input : data,
+    n_visible : 6,
+    n_hidden : 2
+});
+
+rbm.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.CRBM" id="apidoc.module.dnn.CRBM">module dnn.CRBM</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM.CRBM" id="apidoc.element.dnn.CRBM.CRBM">
+        function <span class="apidocSignatureSpan">dnn.</span>CRBM
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CRBM = function (settings) {
+    RBM.call(this,settings);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var data = [[0.4, 0.5, 0.5, 0.,  0.,  0.7],
+            [0.5, 0.3,  0.5, 0.,  1,  0.6],
+            [0.4, 0.5, 0.5, 0.,  1,  0.9],
+            [0.,  0.,  0., 0.3, 0.5, 0.],
+            [0.,  0.,  0., 0.4, 0.5, 0.],
+            [0.,  0.,  0., 0.5, 0.5, 0.]];
+
+var crbm = new dnn.<span class="apidocCodeKeywordSpan">CRBM</span>({
+    input : data,
+    n_visible : 6,
+    n_hidden : 5
+});
+
+crbm.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.CRBM.prototype" id="apidoc.module.dnn.CRBM.prototype">module dnn.CRBM.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM.prototype.getReconstructionCrossEntropy" id="apidoc.element.dnn.CRBM.prototype.getReconstructionCrossEntropy">
+        function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>getReconstructionCrossEntropy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReconstructionCrossEntropy = function () {
+    var self = this;
+    var reconstructedV = self.reconstruct(self.input);
+    var a = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+        return x*Math.log(y);
+    });
+
+    var b = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+        return (1-x)*Math.log(1-y);
+    });
+
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        &#x27;lr&#x27; : lr,
+        &#x27;k&#x27; : k,
+        &#x27;input&#x27; : layerInput,
+        &#x27;epochs&#x27; : epochs
+    });
+
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.<span class="apidocCodeKeywordSpan">getReconstructionCrossEntropy
+</span>());
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+    }
+
+    // Synchronization between RBM and sigmoid Layer
+    self.sigmoidLayers[i].W = rbm.W;
+    self.sigmoidLayers[i].b = rbm.hbias;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM.prototype.propdown" id="apidoc.element.dnn.CRBM.prototype.propdown">
+        function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>propdown
+        <span class="apidocSignatureSpan">(h)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propdown = function (h) {
+    var self = this;
+    var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+    return preSigmoidActivation;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.<span class="apidocCodeKeywordSpan">propdown</span>(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM.prototype.reconstruct" id="apidoc.element.dnn.CRBM.prototype.reconstruct">
+        function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>reconstruct
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reconstruct = function (v) {
+    var self = this;
+    var reconstructedV = self.sampleVgivenH(self.sampleHgivenV(v)[0])[0];
+    return reconstructedV;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    k : 1, // CD-k.
+    epochs : trainingEpochs
+});
+
+var v = [[1, 1, 0, 0, 0, 0],
+         [0, 0, 0, 1, 1, 0]];
+
+console.log(rbm.<span class="apidocCodeKeywordSpan">reconstruct</span>(v));
+console.log(rbm.sampleHgivenV(v)[0]); // get hidden layer probabilities from visible unit.
+```
+
+## DBN (Deep Belief Network)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[1,1,1,0,0,0],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.CRBM.prototype.sampleVgivenH" id="apidoc.element.dnn.CRBM.prototype.sampleVgivenH">
+        function <span class="apidocSignatureSpan">dnn.CRBM.prototype.</span>sampleVgivenH
+        <span class="apidocSignatureSpan">(h0_sample)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sampleVgivenH = function (h0_sample) {
+    var self = this;
+    var a_h = self.propdown(h0_sample);
+    var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+    var b = math.activateMat(a_h,function(x){ return 1./x ;});
+    var v1_mean = math.minusMat(a,b);
+    var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+    var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+    var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+    var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+        if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+        return x/y;
+    })
+    return [v1_mean,v1_sample];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy;
+
+};
+
+CRBM.prototype.reconstruct = function(v) {
+    var self = this;
+    var reconstructedV = self.<span class="apidocCodeKeywordSpan">sampleVgivenH</span>(self.sampleHgivenV(v)[0])[0];
+    return reconstructedV;
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.DBN" id="apidoc.module.dnn.DBN">module dnn.DBN</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.DBN" id="apidoc.element.dnn.DBN.DBN">
+        function <span class="apidocSignatureSpan">dnn.</span>DBN
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DBN = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.sigmoidLayers = [];
+    self.rbmLayers = [];
+    self.nLayers = settings[&#x27;hidden_layer_sizes&#x27;].length;
+    self.hiddenLayerSizes = settings[&#x27;hidden_layer_sizes&#x27;];
+    self.nIns = settings[&#x27;n_ins&#x27;];
+    self.nOuts = settings[&#x27;n_outs&#x27;];
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+
+    // Constructing Deep Neural Network
+    var i;
+    for(i=0 ; i&#x3c;self.nLayers ; i++) {
+        var inputSize, layerInput;
+        if(i == 0)
+            inputSize = settings[&#x27;n_ins&#x27;];
+        else
+            inputSize = settings[&#x27;hidden_layer_sizes&#x27;][i-1];
+
+        if(i == 0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV();
+
+        var sigmoidLayer = new HiddenLayer({
+            &#x27;input&#x27; : layerInput,
+            &#x27;n_in&#x27; : inputSize,
+            &#x27;n_out&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+            &#x27;activation&#x27; : math.sigmoid
+        });
+        self.sigmoidLayers.push(sigmoidLayer);
+
+        var rbmLayer = new RBM({
+            &#x27;input&#x27; : layerInput,
+            &#x27;n_visible&#x27; : inputSize,
+            &#x27;n_hidden&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i]
+        });
+        self.rbmLayers.push(rbmLayer);
+    }
+    self.outputLayer = new HiddenLayer({
+        &#x27;input&#x27; : self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV(),
+        &#x27;n_in&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][settings[&#x27;hidden_layer_sizes&#x27;].length - 1],
+        &#x27;n_out&#x27; : settings[&#x27;n_outs&#x27;],
+        &#x27;activation&#x27; : math.sigmoid
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+         [1, 0],
+         [0, 1],
+         [0, 1],
+         [0, 1]];
+
+var pretrain_lr = 0.6, pretrain_epochs = 900, k = 1, finetune_lr = 0.6, finetune_epochs = 500;
+
+var dbn = new dnn.<span class="apidocCodeKeywordSpan">DBN</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_ins&#x27; : 6,
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [10,12,11,8,6,4]
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.DBN.prototype" id="apidoc.module.dnn.DBN.prototype">module dnn.DBN.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.prototype.finetune" id="apidoc.element.dnn.DBN.prototype.finetune">
+        function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>finetune
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finetune = function (settings) {
+    var self = this;
+    var lr = 0.2, epochs = 1000;
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+        lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+        epochs = settings[&#x27;epochs&#x27;];
+
+    //Fine-Tuning Using MLP (Back Propagation)
+    var i;
+    var pretrainedWArray = [], pretrainedBArray = []; // HiddenLayer W,b values already pretrained by RBM.
+    for(i=0; i&#x3c;self.nLayers ; i++) {
+        pretrainedWArray.push(self.sigmoidLayers[i].W);
+        pretrainedBArray.push(self.sigmoidLayers[i].b);
+    }
+    // W,b of Final Output Layer are not involved in pretrainedWArray, pretrainedBArray so they will be treated as undefined at
+MLP Constructor.
+    var mlp = new MLP({
+        &#x27;input&#x27; : self.x,
+        &#x27;label&#x27; : self.y,
+        &#x27;n_ins&#x27; : self.nIns,
+        &#x27;n_outs&#x27; : self.nOuts,
+        &#x27;hidden_layer_sizes&#x27; : self.hiddenLayerSizes,
+        &#x27;w_array&#x27; : pretrainedWArray,
+        &#x27;b_array&#x27; : pretrainedBArray
+    });
+    mlp.set(&#x27;log level&#x27;,self.settings[&#x27;log level&#x27;]);
+    mlp.train({
+        &#x27;lr&#x27; : lr,
+        &#x27;epochs&#x27; : epochs
+    });
+    for(i=0; i&#x3c;self.nLayers ; i++) {
+        self.sigmoidLayers[i].W = mlp.sigmoidLayers[i].W;
+        self.sigmoidLayers[i].b = mlp.sigmoidLayers[i].b;
+    }
+    self.outputLayer.W = mlp.sigmoidLayers[self.nLayers].W;
+    self.outputLayer.b = mlp.sigmoidLayers[self.nLayers].b;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+dbn.pretrain({
+&#x27;lr&#x27; : pretrain_lr,
+&#x27;k&#x27; : k, // RBM CD-k.
+&#x27;epochs&#x27; : pretrain_epochs
+});
+
+// Fine-Tuning dbn using mlp backpropagation.
+dbn.<span class="apidocCodeKeywordSpan">finetune</span>({
+&#x27;lr&#x27; : finetune_lr,
+&#x27;epochs&#x27; : finetune_epochs
+});
+
+/*
+for(var i =0;i&#x3c;6;i++) {
+console.log(i+1,&#x22;th layer W : &#x22;,dbn.sigmoidLayers[i].W);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.prototype.getReconstructionCrossEntropy" id="apidoc.element.dnn.DBN.prototype.getReconstructionCrossEntropy">
+        function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>getReconstructionCrossEntropy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReconstructionCrossEntropy = function () {
+    var self = this;
+    var reconstructedOutput = self.predict(self.x);
+    var a = math.activateTwoMat(self.y,reconstructedOutput,function(x,y){
+        return x*Math.log(y);
+    });
+
+    var b = math.activateTwoMat(self.y,reconstructedOutput,function(x,y){
+        return (1-x)*Math.log(1-y);
+    });
+
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        &#x27;lr&#x27; : lr,
+        &#x27;k&#x27; : k,
+        &#x27;input&#x27; : layerInput,
+        &#x27;epochs&#x27; : epochs
+    });
+
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.<span class="apidocCodeKeywordSpan">getReconstructionCrossEntropy
+</span>());
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+    }
+
+    // Synchronization between RBM and sigmoid Layer
+    self.sigmoidLayers[i].W = rbm.W;
+    self.sigmoidLayers[i].b = rbm.hbias;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.prototype.predict" id="apidoc.element.dnn.DBN.prototype.predict">
+        function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>predict
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">predict = function (x) {
+    var self = this;
+    var layerInput = x, i;
+    for(i=0; i&#x3c;self.nLayers ; i++) {
+        layerInput = self.sigmoidLayers[i].output(layerInput);
+    }
+    var output = self.outputLayer.output(layerInput);
+    return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+     [0, 0, 0, 1, 1, 0],
+     [1, 1, 1, 1, 1, 0]];
+
+console.log(&#x22;Result : &#x22;,lrClassifier.<span class="apidocCodeKeywordSpan">predict</span>(x));
+```
+
+## MLP (Multi-Layer Perceptron)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[0.4, 0.5, 0.5, 0.,  0.,  0.],
+[0.5, 0.3,  0.5, 0.,  0.,  0.],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.prototype.pretrain" id="apidoc.element.dnn.DBN.prototype.pretrain">
+        function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>pretrain
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pretrain = function (settings) {
+    var self = this;
+    var lr = 0.6, k = 1, epochs = 2000;
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+        lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;k&#x27;] !== &#x27;undefined&#x27;)
+        k = settings[&#x27;k&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+        epochs = settings[&#x27;epochs&#x27;];
+
+    var i,j;
+    for(i=0; i&#x3c;self.nLayers ; i++) {
+        var layerInput ,rbm;
+        if (i==0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[i-1].sampleHgivenV(layerInput);
+        rbm = self.rbmLayers[i];
+        rbm.set(&#x27;log level&#x27;,0);
+        rbm.train({
+            &#x27;lr&#x27; : lr,
+            &#x27;k&#x27; : k,
+            &#x27;input&#x27; : layerInput,
+            &#x27;epochs&#x27; : epochs
+        });
+
+        if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+            console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.getReconstructionCrossEntropy());
+            console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+        }
+
+        // Synchronization between RBM and sigmoid Layer
+        self.sigmoidLayers[i].W = rbm.W;
+        self.sigmoidLayers[i].b = rbm.hbias;
+    }
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0)
+        console.log(&#x22;DBN Pre-Training Completed.&#x22;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [10,12,11,8,6,4]
+});
+
+dbn.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+// Pre-Training using using RBM
+dbn.<span class="apidocCodeKeywordSpan">pretrain</span>({
+    &#x27;lr&#x27; : pretrain_lr,
+    &#x27;k&#x27; : k, // RBM CD-k.
+    &#x27;epochs&#x27; : pretrain_epochs
+});
+
+// Fine-Tuning dbn using mlp backpropagation.
+dbn.finetune({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.DBN.prototype.set" id="apidoc.element.dnn.DBN.prototype.set">
+        function <span class="apidocSignatureSpan">dnn.DBN.prototype.</span>set
+        <span class="apidocSignatureSpan">(property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (property, value) {
+    var self = this;
+    self.settings[property] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var lrClassifier = new dnn.LogisticRegression({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.<span class="apidocCodeKeywordSpan">set</span>(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.train({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.HiddenLayer" id="apidoc.module.dnn.HiddenLayer">module dnn.HiddenLayer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer.HiddenLayer" id="apidoc.element.dnn.HiddenLayer.HiddenLayer">
+        function <span class="apidocSignatureSpan">dnn.</span>HiddenLayer
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HiddenLayer = function (settings) {
+    var self = this;
+    self.input = settings[&#x27;input&#x27;];
+
+    if(typeof settings[&#x27;W&#x27;] === &#x27;undefined&#x27;) {
+        var a = 1. / settings[&#x27;n_in&#x27;];
+        settings[&#x27;W&#x27;] = math.randMat(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;],-a,a);
+    }
+    if(typeof settings[&#x27;b&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;b&#x27;] = math.zeroVec(settings[&#x27;n_out&#x27;]);
+    if(typeof settings[&#x27;activation&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;activation&#x27;] = math.sigmoid;
+
+    self.W = settings[&#x27;W&#x27;];
+    self.b = settings[&#x27;b&#x27;];
+    self.activation = settings[&#x27;activation&#x27;];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.HiddenLayer.prototype" id="apidoc.module.dnn.HiddenLayer.prototype">module dnn.HiddenLayer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer.prototype.backPropagate" id="apidoc.element.dnn.HiddenLayer.prototype.backPropagate">
+        function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>backPropagate
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">backPropagate = function (input) { // example+num * n_out matrix
+    var self = this;
+    if(typeof input === &#x27;undefined&#x27;)
+        throw new Error(&#x22;No BackPropagation Input.&#x22;)
+
+    var linearOutput = math.mulMat(input, m.transpose(self.W));
+    return linearOutput;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/*
+ self.nLayers = 3 (3 hidden layers)
+ delta[3] : ouput layer
+ delta[2] : 3rd hidden layer, delta[0] : 1st hidden layer
+ */
+for(i = self.nLayers - 1; i&#x3e;=0 ; i--) {
+    delta[i] = m.mulMatElementWise(self.sigmoidLayers[i+1].<span class="apidocCodeKeywordSpan">backPropagate</span>(delta[i+1]),
+        m.activateMat(self.sigmoidLayers[i].linearOutput(layerInput[i]), m.dSigmoid));
+}
+// Update Weight, Bias
+for(var i=0; i&#x3c;self.nLayers+1 ; i++) {
+    var deltaW = m.activateMat(m.mulMat(m.transpose(layerInput[i]),delta[i]),function(x){return 1. * x / self.x.length;})
+    var deltaB = m.meanMatAxis(delta[i],0);
+    self.sigmoidLayers[i].W = m.addMat(self.sigmoidLayers[i].W,deltaW);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer.prototype.linearOutput" id="apidoc.element.dnn.HiddenLayer.prototype.linearOutput">
+        function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>linearOutput
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linearOutput = function (input) { // returns the value before activation.
+    var self = this;
+    if(typeof input !== &#x27;undefined&#x27;)
+        self.input = input;
+
+    var linearOutput = math.addMatVec(math.mulMat(self.input,self.W),self.b);
+    return linearOutput;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+for(i=0; i&#x3c;self.nLayers+1 ; i++) {
+    layerInput.push(self.sigmoidLayers[i].output(layerInput[i]));
+}
+var output = layerInput[self.nLayers+1];
+// Back Propagation
+var delta = new Array(self.nLayers + 1);
+delta[self.nLayers] = m.mulMatElementWise(m.minusMat(self.y, output),
+    m.activateMat(self.sigmoidLayers[self.nLayers].<span class="apidocCodeKeywordSpan">linearOutput</span>(layerInput[self.nLayers
+]), m.dSigmoid));
+
+/*
+ self.nLayers = 3 (3 hidden layers)
+ delta[3] : ouput layer
+ delta[2] : 3rd hidden layer, delta[0] : 1st hidden layer
+ */
+for(i = self.nLayers - 1; i&#x3e;=0 ; i--) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer.prototype.output" id="apidoc.element.dnn.HiddenLayer.prototype.output">
+        function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>output
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">output = function (input) {
+    var self = this;
+    if(typeof input !== &#x27;undefined&#x27;)
+        self.input = input;
+
+    var linearOutput = math.addMatVec(math.mulMat(self.input,self.W),self.b);
+    return math.activateMat(linearOutput,self.activation);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return crossEntropy
+};
+
+DBN.prototype.predict = function (x) {
+var self = this;
+var layerInput = x, i;
+for(i=0; i&#x3c;self.nLayers ; i++) {
+    layerInput = self.sigmoidLayers[i].<span class="apidocCodeKeywordSpan">output</span>(layerInput);
+}
+var output = self.outputLayer.output(layerInput);
+return output;
+};
+
+DBN.prototype.set = function(property,value) {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.HiddenLayer.prototype.sampleHgivenV" id="apidoc.element.dnn.HiddenLayer.prototype.sampleHgivenV">
+        function <span class="apidocSignatureSpan">dnn.HiddenLayer.prototype.</span>sampleHgivenV
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sampleHgivenV = function (input) {
+    var self = this;
+    if(typeof input !== &#x27;undefined&#x27;)
+        self.input = input;
+
+    var hMean = self.output();
+    var hSample = math.probToBinaryMat(hMean);
+    return hSample;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    epochs : trainingEpochs
+});
+
+var v = [[1, 1, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 0]];
+
+console.log(rbm.reconstruct(v));
+console.log(rbm.<span class="apidocCodeKeywordSpan">sampleHgivenV</span>(v)[0]); // get hidden layer probabilities from visible
+unit.
+```
+
+## DBN (Deep Belief Network)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[1,1,1,0,0,0],
+[1,0,1,0,0,0],
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.LogisticRegression" id="apidoc.module.dnn.LogisticRegression">module dnn.LogisticRegression</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression.LogisticRegression" id="apidoc.element.dnn.LogisticRegression.LogisticRegression">
+        function <span class="apidocSignatureSpan">dnn.</span>LogisticRegression
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LogisticRegression = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.W = math.zeroMat(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;]);
+    self.b = math.zeroVec(settings[&#x27;n_out&#x27;]);
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var y = [[1, 0],
+         [1, 0],
+         [1, 0],
+         [0, 1],
+         [0, 1],
+         [0, 1]];
+
+var lrClassifier = new dnn.<span class="apidocCodeKeywordSpan">LogisticRegression</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.LogisticRegression.prototype" id="apidoc.module.dnn.LogisticRegression.prototype">module dnn.LogisticRegression.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression.prototype.getReconstructionCrossEntropy" id="apidoc.element.dnn.LogisticRegression.prototype.getReconstructionCrossEntropy">
+        function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>getReconstructionCrossEntropy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReconstructionCrossEntropy = function () {
+    var self = this;
+    var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+    var a = math.mulMatElementWise(self.y, math.activateMat(probYgivenX,Math.log));
+    var b = math.mulMatElementWise(math.mulMatScalar(math.addMatScalar(self.y,-1),-1),
+        math.activateMat(math.mulMatScalar(math.addMatScalar(probYgivenX,-1),-1),Math.log));
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        &#x27;lr&#x27; : lr,
+        &#x27;k&#x27; : k,
+        &#x27;input&#x27; : layerInput,
+        &#x27;epochs&#x27; : epochs
+    });
+
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.<span class="apidocCodeKeywordSpan">getReconstructionCrossEntropy
+</span>());
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+    }
+
+    // Synchronization between RBM and sigmoid Layer
+    self.sigmoidLayers[i].W = rbm.W;
+    self.sigmoidLayers[i].b = rbm.hbias;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression.prototype.predict" id="apidoc.element.dnn.LogisticRegression.prototype.predict">
+        function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>predict
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">predict = function (x) {
+    var self = this;
+    return math.softmaxMat(math.addMatVec(math.mulMat(x,self.W),self.b));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+     [0, 0, 0, 1, 1, 0],
+     [1, 1, 1, 1, 1, 0]];
+
+console.log(&#x22;Result : &#x22;,lrClassifier.<span class="apidocCodeKeywordSpan">predict</span>(x));
+```
+
+## MLP (Multi-Layer Perceptron)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[0.4, 0.5, 0.5, 0.,  0.,  0.],
+[0.5, 0.3,  0.5, 0.,  0.,  0.],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression.prototype.set" id="apidoc.element.dnn.LogisticRegression.prototype.set">
+        function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>set
+        <span class="apidocSignatureSpan">(property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (property, value) {
+    var self = this;
+    self.settings[property] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var lrClassifier = new dnn.LogisticRegression({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.<span class="apidocCodeKeywordSpan">set</span>(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.train({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.LogisticRegression.prototype.train" id="apidoc.element.dnn.LogisticRegression.prototype.train">
+        function <span class="apidocSignatureSpan">dnn.LogisticRegression.prototype.</span>train
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">train = function (settings) {
+    var self = this;
+    var lr = 0.1, epochs = 200;
+    if(typeof settings[&#x27;input&#x27;] !== &#x27;undefined&#x27;)
+        self.x = settings[&#x27;input&#x27;];
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+        lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+        epochs = settings[&#x27;epochs&#x27;];
+    var i;
+    var currentProgress = 1;
+    for(i=0;i&#x3c;epochs;i++) {
+        var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+        var deltaY = math.minusMat(self.y,probYgivenX);
+
+        var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+        var deltaB = math.meanMatAxis(deltaY,0);
+
+        self.W = math.addMat(self.W,math.mulMatScalar(deltaW,lr));
+        self.b = math.addVec(self.b,math.mulVecScalar(deltaB,lr));
+        if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+            var progress = (1.*i/epochs)*100;
+            if(progress &#x3e; currentProgress) {
+                console.log(&#x22;LogisticRegression&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+                currentProgress++;
+            }
+        }
+    }
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0)
+        console.log(&#x22;LogisticRegression Final Cross Entropy : &#x22;,self.getReconstructionCrossEntropy());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.<span class="apidocCodeKeywordSpan">train</span>({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 0],
+[1, 1, 1, 1, 1, 0]];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.MLP" id="apidoc.module.dnn.MLP">module dnn.MLP</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP.MLP" id="apidoc.element.dnn.MLP.MLP">
+        function <span class="apidocSignatureSpan">dnn.</span>MLP
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MLP = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.sigmoidLayers = [];
+    self.nLayers = settings[&#x27;hidden_layer_sizes&#x27;].length;
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+    var i;
+    for(i=0 ; i&#x3c;self.nLayers+1 ; i++) {
+        var inputSize, layerInput;
+        if(i == 0)
+            inputSize = settings[&#x27;n_ins&#x27;];
+        else
+            inputSize = settings[&#x27;hidden_layer_sizes&#x27;][i-1];
+
+        if(i == 0)
+            layerInput = self.x;
+        else
+            layerInput = self.sigmoidLayers[self.sigmoidLayers.length-1].sampleHgivenV();
+
+        var sigmoidLayer;
+        if(i == self.nLayers) {
+            sigmoidLayer = new HiddenLayer({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_in&#x27; : inputSize,
+                &#x27;n_out&#x27; : settings[&#x27;n_outs&#x27;],
+                &#x27;activation&#x27; : math.sigmoid,
+                &#x27;W&#x27; : (typeof settings[&#x27;w_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;w_array&#x27;][i],
+                &#x27;b&#x27; : (typeof settings[&#x27;b_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;b_array&#x27;][i]
+            });
+        } else {
+            sigmoidLayer = new HiddenLayer({
+                &#x27;input&#x27; : layerInput,
+                &#x27;n_in&#x27; : inputSize,
+                &#x27;n_out&#x27; : settings[&#x27;hidden_layer_sizes&#x27;][i],
+                &#x27;activation&#x27; : math.sigmoid,
+                &#x27;W&#x27; : (typeof settings[&#x27;w_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;w_array&#x27;][i],
+                &#x27;b&#x27; : (typeof settings[&#x27;b_array&#x27;] === &#x27;undefined&#x27;)? undefined : settings[&#x27;b_array&#x27;][i]
+            });
+        }
+        self.sigmoidLayers.push(sigmoidLayer);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var y =  [[1, 0],
+          [1, 0],
+          [1, 0],
+          [0, 1],
+          [0, 1],
+          [0, 1]];
+
+var mlp = new dnn.<span class="apidocCodeKeywordSpan">MLP</span>({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_ins&#x27; : 6,
+    &#x27;n_outs&#x27; : 2,
+    &#x27;hidden_layer_sizes&#x27; : [4,4,5]
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.MLP.prototype" id="apidoc.module.dnn.MLP.prototype">module dnn.MLP.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP.prototype.getReconstructionCrossEntropy" id="apidoc.element.dnn.MLP.prototype.getReconstructionCrossEntropy">
+        function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>getReconstructionCrossEntropy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReconstructionCrossEntropy = function () {
+    var self = this;
+    var reconstructedOutput = self.predict(self.x);
+    var a = math.activateTwoMat(self.y,reconstructedOutput,function(x,y){
+        return x*Math.log(y);
+    });
+
+    var b = math.activateTwoMat(self.y,reconstructedOutput,function(x,y){
+        return (1-x)*Math.log(1-y);
+    });
+
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        &#x27;lr&#x27; : lr,
+        &#x27;k&#x27; : k,
+        &#x27;input&#x27; : layerInput,
+        &#x27;epochs&#x27; : epochs
+    });
+
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.<span class="apidocCodeKeywordSpan">getReconstructionCrossEntropy
+</span>());
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+    }
+
+    // Synchronization between RBM and sigmoid Layer
+    self.sigmoidLayers[i].W = rbm.W;
+    self.sigmoidLayers[i].b = rbm.hbias;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP.prototype.predict" id="apidoc.element.dnn.MLP.prototype.predict">
+        function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>predict
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">predict = function (x) {
+    var self = this;
+    var output = x;
+    for(i=0; i&#x3c;self.nLayers+1 ; i++) {
+        output = self.sigmoidLayers[i].output(output);
+    }
+    return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+     [0, 0, 0, 1, 1, 0],
+     [1, 1, 1, 1, 1, 0]];
+
+console.log(&#x22;Result : &#x22;,lrClassifier.<span class="apidocCodeKeywordSpan">predict</span>(x));
+```
+
+## MLP (Multi-Layer Perceptron)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[0.4, 0.5, 0.5, 0.,  0.,  0.],
+[0.5, 0.3,  0.5, 0.,  0.,  0.],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP.prototype.set" id="apidoc.element.dnn.MLP.prototype.set">
+        function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>set
+        <span class="apidocSignatureSpan">(property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (property, value) {
+    var self = this;
+    self.settings[property] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var lrClassifier = new dnn.LogisticRegression({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.<span class="apidocCodeKeywordSpan">set</span>(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.train({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.MLP.prototype.train" id="apidoc.element.dnn.MLP.prototype.train">
+        function <span class="apidocSignatureSpan">dnn.MLP.prototype.</span>train
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">train = function (settings) {
+    var self = this;
+    var lr = 0.6, epochs = 1000;
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+        lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+        epochs = settings[&#x27;epochs&#x27;];
+
+
+    var epoch;
+    var currentProgress = 1;
+    for(epoch=0 ; epoch &#x3c; epochs ; epoch++) {
+
+        // Feed Forward
+        var i;
+        var layerInput = [];
+        layerInput.push(self.x);
+        for(i=0; i&#x3c;self.nLayers+1 ; i++) {
+            layerInput.push(self.sigmoidLayers[i].output(layerInput[i]));
+        }
+        var output = layerInput[self.nLayers+1];
+        // Back Propagation
+        var delta = new Array(self.nLayers + 1);
+        delta[self.nLayers] = m.mulMatElementWise(m.minusMat(self.y, output),
+            m.activateMat(self.sigmoidLayers[self.nLayers].linearOutput(layerInput[self.nLayers]), m.dSigmoid));
+
+<span class="apidocCodeCommentSpan">        /*
+         self.nLayers = 3 (3 hidden layers)
+         delta[3] : ouput layer
+         delta[2] : 3rd hidden layer, delta[0] : 1st hidden layer
+         */
+</span>        for(i = self.nLayers - 1; i&#x3e;=0 ; i--) {
+            delta[i] = m.mulMatElementWise(self.sigmoidLayers[i+1].backPropagate(delta[i+1]),
+                m.activateMat(self.sigmoidLayers[i].linearOutput(layerInput[i]), m.dSigmoid));
+        }
+        // Update Weight, Bias
+        for(var i=0; i&#x3c;self.nLayers+1 ; i++) {
+            var deltaW = m.activateMat(m.mulMat(m.transpose(layerInput[i]),delta[i]),function(x){return 1. * x / self.x.length;})
+            var deltaB = m.meanMatAxis(delta[i],0);
+            self.sigmoidLayers[i].W = m.addMat(self.sigmoidLayers[i].W,deltaW);
+            self.sigmoidLayers[i].b = m.addVec(self.sigmoidLayers[i].b,deltaB);
+        }
+
+        if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+            var progress = (1.*epoch/epochs)*100;
+            if(progress &#x3e; currentProgress) {
+                console.log(&#x22;MLP&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+                currentProgress+=8;
+            }
+        }
+    }
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0)
+        console.log(&#x22;MLP Final Cross Entropy : &#x22;,self.getReconstructionCrossEntropy());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.<span class="apidocCodeKeywordSpan">train</span>({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 0],
+[1, 1, 1, 1, 1, 0]];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.RBM" id="apidoc.module.dnn.RBM">module dnn.RBM</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.RBM" id="apidoc.element.dnn.RBM.RBM">
+        function <span class="apidocSignatureSpan">dnn.</span>RBM
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RBM = function (settings) {
+    var self = this;
+
+    self.nVisible = settings[&#x27;n_visible&#x27;];
+    self.nHidden = settings[&#x27;n_hidden&#x27;];
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+
+    if(typeof settings[&#x27;W&#x27;] === &#x27;undefined&#x27;) {
+        var a = 1. / self.nVisible;
+        settings[&#x27;W&#x27;] = math.randMat(self.nVisible,self.nHidden,-a,a);
+    }
+
+    if(typeof settings[&#x27;hbias&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;hbias&#x27;] = math.zeroVec(self.nHidden);
+
+    if(typeof settings[&#x27;vbias&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;vbias&#x27;] = math.zeroVec(self.nVisible);
+
+    self.input = settings[&#x27;input&#x27;];
+    self.W = settings[&#x27;W&#x27;];
+    self.hbias = settings[&#x27;hbias&#x27;];
+    self.vbias = settings[&#x27;vbias&#x27;];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var data = [[1,1,1,0,0,0],
+            [1,0,1,0,0,0],
+            [1,1,1,0,0,0],
+            [0,0,1,1,1,0],
+            [0,0,1,1,0,0],
+            [0,0,1,1,1,0]];
+
+var rbm = new dnn.<span class="apidocCodeKeywordSpan">RBM</span>({
+    input : data,
+    n_visible : 6,
+    n_hidden : 2
+});
+
+rbm.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.RBM.prototype" id="apidoc.module.dnn.RBM.prototype">module dnn.RBM.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.getReconstructionCrossEntropy" id="apidoc.element.dnn.RBM.prototype.getReconstructionCrossEntropy">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>getReconstructionCrossEntropy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReconstructionCrossEntropy = function () {
+    var self = this;
+    var reconstructedV = self.reconstruct(self.input);
+    var a = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+        return x*Math.log(y);
+    });
+
+    var b = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+        return (1-x)*Math.log(1-y);
+    });
+
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        &#x27;lr&#x27; : lr,
+        &#x27;k&#x27; : k,
+        &#x27;input&#x27; : layerInput,
+        &#x27;epochs&#x27; : epochs
+    });
+
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Final Cross Entropy: &#x22;,rbm.<span class="apidocCodeKeywordSpan">getReconstructionCrossEntropy
+</span>());
+        console.log(&#x22;DBN RBM&#x22;,i,&#x22;th Layer Pre-Training Completed.&#x22;);
+    }
+
+    // Synchronization between RBM and sigmoid Layer
+    self.sigmoidLayers[i].W = rbm.W;
+    self.sigmoidLayers[i].b = rbm.hbias;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.gibbsHVH" id="apidoc.element.dnn.RBM.prototype.gibbsHVH">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>gibbsHVH
+        <span class="apidocSignatureSpan">(h0_sample)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gibbsHVH = function (h0_sample) {
+    var self = this;
+    var v1 = self.sampleVgivenH(h0_sample);
+    var h1 = self.sampleHgivenV(v1[1]);
+    return [v1[0],v1[1],h1[0],h1[1]];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ph = self.sampleHgivenV(self.input);
+var phMean = ph[0], phSample = ph[1];
+var chainStart = phSample;
+var nvMeans, nvSamples, nhMeans, nhSamples;
+
+for(j=0 ; j&#x3c;k ; j++) {
+    if (j==0) {
+        var gibbsVH = self.<span class="apidocCodeKeywordSpan">gibbsHVH</span>(chainStart);
+        nvMeans = gibbsVH[0], nvSamples = gibbsVH[1], nhMeans = gibbsVH[2], nhSamples = gibbsVH[3];
+    } else {
+        var gibbsVH = self.gibbsHVH(nhSamples);
+        nvMeans = gibbsVH[0], nvSamples = gibbsVH[1], nhMeans = gibbsVH[2], nhSamples = gibbsVH[3];
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.propdown" id="apidoc.element.dnn.RBM.prototype.propdown">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>propdown
+        <span class="apidocSignatureSpan">(h)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propdown = function (h) {
+    var self = this;
+    var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+    return math.activateMat(preSigmoidActivation, m.sigmoid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.<span class="apidocCodeKeywordSpan">propdown</span>(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.propup" id="apidoc.element.dnn.RBM.prototype.propup">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>propup
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propup = function (v) {
+    var self = this;
+    var preSigmoidActivation = math.addMatVec(math.mulMat(v,self.W),self.hbias);
+    return math.activateMat(preSigmoidActivation, m.sigmoid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+return math.activateMat(preSigmoidActivation, m.sigmoid);
+};
+
+RBM.prototype.sampleHgivenV = function(v0_sample) {
+var self = this;
+var h1_mean = self.<span class="apidocCodeKeywordSpan">propup</span>(v0_sample);
+var h1_sample = math.probToBinaryMat(h1_mean);
+return [h1_mean,h1_sample];
+};
+
+RBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var v1_mean = self.propdown(h0_sample);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.reconstruct" id="apidoc.element.dnn.RBM.prototype.reconstruct">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>reconstruct
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reconstruct = function (v) {
+    var self = this;
+    var h = math.activateMat(math.addMatVec(math.mulMat(v,self.W),self.hbias), math.sigmoid);
+    var reconstructedV = math.activateMat(math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias), math.sigmoid);
+    return reconstructedV;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    k : 1, // CD-k.
+    epochs : trainingEpochs
+});
+
+var v = [[1, 1, 0, 0, 0, 0],
+         [0, 0, 0, 1, 1, 0]];
+
+console.log(rbm.<span class="apidocCodeKeywordSpan">reconstruct</span>(v));
+console.log(rbm.sampleHgivenV(v)[0]); // get hidden layer probabilities from visible unit.
+```
+
+## DBN (Deep Belief Network)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[1,1,1,0,0,0],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.sampleHgivenV" id="apidoc.element.dnn.RBM.prototype.sampleHgivenV">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>sampleHgivenV
+        <span class="apidocSignatureSpan">(v0_sample)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sampleHgivenV = function (v0_sample) {
+    var self = this;
+    var h1_mean = self.propup(v0_sample);
+    var h1_sample = math.probToBinaryMat(h1_mean);
+    return [h1_mean,h1_sample];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    epochs : trainingEpochs
+});
+
+var v = [[1, 1, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 0]];
+
+console.log(rbm.reconstruct(v));
+console.log(rbm.<span class="apidocCodeKeywordSpan">sampleHgivenV</span>(v)[0]); // get hidden layer probabilities from visible
+unit.
+```
+
+## DBN (Deep Belief Network)
+```
+var dnn = require(&#x27;dnn&#x27;);
+var x = [[1,1,1,0,0,0],
+[1,0,1,0,0,0],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.sampleVgivenH" id="apidoc.element.dnn.RBM.prototype.sampleVgivenH">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>sampleVgivenH
+        <span class="apidocSignatureSpan">(h0_sample)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sampleVgivenH = function (h0_sample) {
+    var self = this;
+    var v1_mean = self.propdown(h0_sample);
+    var v1_sample = math.probToBinaryMat(v1_mean);
+    return [v1_mean,v1_sample];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+    return crossEntropy;
+
+};
+
+CRBM.prototype.reconstruct = function(v) {
+    var self = this;
+    var reconstructedV = self.<span class="apidocCodeKeywordSpan">sampleVgivenH</span>(self.sampleHgivenV(v)[0])[0];
+    return reconstructedV;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.set" id="apidoc.element.dnn.RBM.prototype.set">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>set
+        <span class="apidocSignatureSpan">(property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (property, value) {
+    var self = this;
+    self.settings[property] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var lrClassifier = new dnn.LogisticRegression({
+    &#x27;input&#x27; : x,
+    &#x27;label&#x27; : y,
+    &#x27;n_in&#x27; : 6,
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.<span class="apidocCodeKeywordSpan">set</span>(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.train({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.RBM.prototype.train" id="apidoc.element.dnn.RBM.prototype.train">
+        function <span class="apidocSignatureSpan">dnn.RBM.prototype.</span>train
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">train = function (settings) {
+    var self = this;
+    var lr=0.8, k= 1, epochs = 1500; // default
+    if(typeof settings[&#x27;input&#x27;] !== &#x27;undefined&#x27;)
+        self.input = settings[&#x27;input&#x27;];
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+        lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;k&#x27;] !== &#x27;undefined&#x27;)
+        k = settings[&#x27;k&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+        epochs = settings[&#x27;epochs&#x27;];
+
+    var i,j;
+    var currentProgress = 1;
+    for(i=0;i&#x3c;epochs;i++) {
+<span class="apidocCodeCommentSpan">        /* CD - k . Contrastive Divergence */
+</span>        var ph = self.sampleHgivenV(self.input);
+        var phMean = ph[0], phSample = ph[1];
+        var chainStart = phSample;
+        var nvMeans, nvSamples, nhMeans, nhSamples;
+
+        for(j=0 ; j&#x3c;k ; j++) {
+            if (j==0) {
+                var gibbsVH = self.gibbsHVH(chainStart);
+                nvMeans = gibbsVH[0], nvSamples = gibbsVH[1], nhMeans = gibbsVH[2], nhSamples = gibbsVH[3];
+            } else {
+                var gibbsVH = self.gibbsHVH(nhSamples);
+                nvMeans = gibbsVH[0], nvSamples = gibbsVH[1], nhMeans = gibbsVH[2], nhSamples = gibbsVH[3];
+            }
+        }
+
+        var deltaW = math.mulMatScalar(math.minusMat(math.mulMat(math.transpose(self.input),phMean), math.mulMat(math.transpose(
+nvSamples),nhMeans)),1. / self.input.length);
+        var deltaVbias = math.meanMatAxis(math.minusMat(self.input,nvSamples),0);
+        var deltaHbias = math.meanMatAxis(math.minusMat(phSample,nhMeans),0);
+
+        self.W = math.addMat(self.W, math.mulMatScalar(deltaW,lr));
+        self.vbias = math.addVec(self.vbias, math.mulVecScalar(deltaVbias,lr));
+        self.hbias = math.addVec(self.hbias, math.mulVecScalar(deltaHbias,lr));
+        if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+            var progress = (1.*i/epochs)*100;
+            if(progress &#x3e; currentProgress) {
+                console.log(&#x22;RBM&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+                currentProgress+=8;
+            }
+        }
+    }
+    if(self.settings[&#x27;log level&#x27;] &#x3e; 0)
+        console.log(&#x22;RBM Final Cross Entropy : &#x22;,self.getReconstructionCrossEntropy())
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x27;n_out&#x27; : 2
+});
+
+lrClassifier.set(&#x27;log level&#x27;,1); // 0 : nothing, 1 : info, 2 : warning.
+
+var training_epochs = 800, lr = 0.01;
+
+lrClassifier.<span class="apidocCodeKeywordSpan">train</span>({
+    &#x27;lr&#x27; : lr,
+    &#x27;epochs&#x27; : training_epochs
+});
+
+x = [[1, 1, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 0],
+[1, 1, 1, 1, 1, 0]];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnn.math" id="apidoc.module.dnn.math">module dnn.math</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.activateMat" id="apidoc.element.dnn.math.activateMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>activateMat
+        <span class="apidocSignatureSpan">(mat, activation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">activateMat = function (mat, activation) {
+    var row = m.shape(mat)[0];
+    var col = m.shape(mat)[1];
+    var i, j,result = [];
+    for(i=0;i&#x3c;row;i++) {
+        var rowVec = [];
+        for(j=0;j&#x3c;col;j++)
+            rowVec.push(activation(mat[i][j]));
+        result.push(rowVec);
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.transpose(self.W)),self.vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.<span class="apidocCodeKeywordSpan">activateMat</span>(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+    if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.activateTwoMat" id="apidoc.element.dnn.math.activateTwoMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>activateTwoMat
+        <span class="apidocSignatureSpan">(mat1, mat2, activation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">activateTwoMat = function (mat1, mat2, activation) {
+    if (mat1.length === mat2.length &#x26;&#x26; mat1[0].length === mat2[0].length) {
+        var result = new Array(mat1.length);
+
+        for (var x = 0; x &#x3c; mat1.length; x++) {
+            result[x] = new Array(mat1[0].length);
+        }
+
+        for (var i = 0; i &#x3c; result.length; i++) {
+            for (var j = 0; j &#x3c; result[i].length; j++) {
+                result[i][j] = activation(mat1[i][j],mat2[i][j]);
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Matrix shape error : not same&#x22;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.<span class="apidocCodeKeywordSpan">activateTwoMat</span>(math.activateMat(d,Math.log),a_h,function(x,y) {
+    if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+    return x/y;
+})
+return [v1_mean,v1_sample];
+};
+CRBM.prototype.getReconstructionCrossEntropy = function() {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.activateTwoVec" id="apidoc.element.dnn.math.activateTwoVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>activateTwoVec
+        <span class="apidocSignatureSpan">(vec1, vec2, activation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">activateTwoVec = function (vec1, vec2, activation) {
+    if (vec1.length === vec2.length) {
+        var result = new Array(vec1.length);
+        for (var i = 0; i &#x3c; result.length; i++) {
+            result[i] = activation(vec1[i],vec2[i]);
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Matrix shape error : not same&#x22;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// For CRBM
+/*
+m.phi = function(mat,vec,low,high) {
+    var i;
+    var result = [];
+    for(i=0;i&#x3c;mat.length;i++) {
+        result.push(m.<span class="apidocCodeKeywordSpan">activateTwoVec</span>(mat[i],vec,function(x,y){return low+(high-low)*
+m.sigmoid(x*y);}))
+    }
+    return result;
+}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.activateVec" id="apidoc.element.dnn.math.activateVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>activateVec
+        <span class="apidocSignatureSpan">(vec, activation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">activateVec = function (vec, activation) {
+    var i, result = [];
+    for(i=0;i&#x3c;vec.length;i++)
+        result.push(activation(vec[i]));
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    mat.push(rowVec);
+}
+return mat;
+};
+
+m.softmaxVec = function(vec) {
+var max = m.maxVec(vec);
+var preSoftmaxVec = m.<span class="apidocCodeKeywordSpan">activateVec</span>(vec,function(x) {return Math.exp(x - max);})
+return m.activateVec(preSoftmaxVec,function(x) {return x/ m.sumVec(preSoftmaxVec)})
+};
+
+m.softmaxMat = function(mat) {
+var result=[], i;
+for(i=0 ; i&#x3c;mat.length ; i++)
+    result.push(m.softmaxVec(mat[i]));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.addMat" id="apidoc.element.dnn.math.addMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>addMat
+        <span class="apidocSignatureSpan">(mat1, mat2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMat = function (mat1, mat2) {
+    if ((mat1.length === mat2.length) &#x26;&#x26; (mat1[0].length === mat2[0].length)) {
+        var result = new Array(mat1.length);
+        for (var i = 0; i &#x3c; mat1.length; i++) {
+            result[i] = new Array(mat1[i].length);
+            for (var j = 0; j &#x3c; mat1[i].length; j++) {
+                result[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x27;Matrix mismatch.&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return x*Math.log(y);
+});
+
+var b = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+    return (1-x)*Math.log(1-y);
+});
+
+var crossEntropy = -math.meanVec(math.sumMatAxis(math.<span class="apidocCodeKeywordSpan">addMat</span>(a,b),1));
+return crossEntropy;
+
+};
+
+CRBM.prototype.reconstruct = function(v) {
+var self = this;
+var reconstructedV = self.sampleVgivenH(self.sampleHgivenV(v)[0])[0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.addMatScalar" id="apidoc.element.dnn.math.addMatScalar">
+        function <span class="apidocSignatureSpan">dnn.math.</span>addMatScalar
+        <span class="apidocSignatureSpan">(mat, scalar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMatScalar = function (mat, scalar) {
+    var row = m.shape(mat)[0];
+    var col = m.shape(mat)[1];
+    var i , j,result = [];
+    for(i=0 ; i&#x3c;row ; i++) {
+        var rowVec = [];
+        for(j=0 ; j&#x3c;col ; j++) {
+            rowVec.push(mat[i][j] + scalar);
+        }
+        result.push(rowVec);
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.log(&#x22;LogisticRegression Final Cross Entropy : &#x22;,self.getReconstructionCrossEntropy());
+};
+
+LogisticRegression.prototype.getReconstructionCrossEntropy = function () {
+var self = this;
+var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var a = math.mulMatElementWise(self.y, math.activateMat(probYgivenX,Math.log));
+var b = math.mulMatElementWise(math.mulMatScalar(math.<span class="apidocCodeKeywordSpan">addMatScalar</span>(self.y,-1),-1),
+    math.activateMat(math.mulMatScalar(math.addMatScalar(probYgivenX,-1),-1),Math.log));
+var crossEntropy = -math.meanVec(math.sumMatAxis(math.addMat(a,b),1));
+return crossEntropy;
+};
+
+LogisticRegression.prototype.predict = function (x) {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.addMatVec" id="apidoc.element.dnn.math.addMatVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>addMatVec
+        <span class="apidocSignatureSpan">(mat, vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMatVec = function (mat, vec) {
+    if(mat[0].length === vec.length) {
+        var result = [];
+        var i;
+        for(i=0;i&#x3c;mat.length;i++)
+            result.push(m.addVec(mat[i],vec));
+        return result;
+    } else {
+        throw new Error(&#x22;Length Error : not same.&#x22;)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+RBM.call(this,settings);
+};
+
+CRBM.prototype = new RBM({});
+
+CRBM.prototype.propdown = function(h) {
+var self = this;
+var preSigmoidActivation = math.<span class="apidocCodeKeywordSpan">addMatVec</span>(math.mulMat(h,math.transpose(self.W)),self.
+vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.addVec" id="apidoc.element.dnn.math.addVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>addVec
+        <span class="apidocSignatureSpan">(vec1, vec2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addVec = function (vec1, vec2) {
+    if(vec1.length === vec2.length) {
+        var result = [];
+        var i;
+        for(i=0;i&#x3c;vec1.length;i++)
+            result.push(vec1[i]+vec2[i]);
+        return result;
+    } else {
+        throw new Error(&#x22;Length Error : not same.&#x22;)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var deltaY = math.minusMat(self.y,probYgivenX);
+
+var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+var deltaB = math.meanMatAxis(deltaY,0);
+
+self.W = math.addMat(self.W,math.mulMatScalar(deltaW,lr));
+self.b = math.<span class="apidocCodeKeywordSpan">addVec</span>(self.b,math.mulVecScalar(deltaB,lr));
+if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+    var progress = (1.*i/epochs)*100;
+    if(progress &#x3e; currentProgress) {
+        console.log(&#x22;LogisticRegression&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+        currentProgress++;
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.dSigmoid" id="apidoc.element.dnn.math.dSigmoid">
+        function <span class="apidocSignatureSpan">dnn.math.</span>dSigmoid
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dSigmoid = function (x){
+    a = m.sigmoid(x);
+    return a * (1. - a);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.dotVec" id="apidoc.element.dnn.math.dotVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>dotVec
+        <span class="apidocSignatureSpan">(vec1, vec2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dotVec = function (vec1, vec2) {
+    if (vec1.length === vec2.length) {
+        var result = 0;
+        for (var i = 0; i &#x3c; vec1.length; i++) {
+            result += vec1[i] * vec2[i];
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Vector mismatch&#x22;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            result[x] = new Array(mat2[0].length);
+        }
+
+
+        var mat2_T = m.transpose(mat2);
+        for (var i = 0; i &#x3c; result.length; i++) {
+            for (var j = 0; j &#x3c; result[i].length; j++) {
+                result[i][j] = m.<span class="apidocCodeKeywordSpan">dotVec</span>(mat1[i],mat2_T[j]);
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Array mismatch&#x22;);
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.fillMat" id="apidoc.element.dnn.math.fillMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>fillMat
+        <span class="apidocSignatureSpan">(row, col, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fillMat = function (row, col, value) {
+    var mat = [];
+    while(mat.length &#x3c; row) {
+        var rowVec = [];
+        while(rowVec.length &#x3c; col)
+            rowVec.push(value);
+        mat.push(rowVec);
+    }
+    return mat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.fillVec" id="apidoc.element.dnn.math.fillVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>fillVec
+        <span class="apidocSignatureSpan">(n, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fillVec = function (n, value) {
+    var vec = [];
+    while(vec.length &#x3c; n)
+        vec.push(value);
+    return vec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.identity" id="apidoc.element.dnn.math.identity">
+        function <span class="apidocSignatureSpan">dnn.math.</span>identity
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">identity = function (n) {
+    var result = new Array(n);
+
+    for (var i = 0; i &#x3c; n ; i++) {
+        result[i] = new Array(n);
+        for (var j = 0; j &#x3c; n; j++) {
+            result[i][j] = (i === j) ? 1 : 0;
+        }
+    }
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.maxMat" id="apidoc.element.dnn.math.maxMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>maxMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">maxMat = function (mat) {
+    var max = mat[0][0];
+    var i = mat.length;
+    while (i--) {
+        for(var j=0;j&#x3c;mat[0].length;j++) {
+            if(mat[i][j] &#x3c; max)
+                max = mat[i][j];
+        }
+    }
+    return max;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.maxVec" id="apidoc.element.dnn.math.maxVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>maxVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">maxVec = function (vec) {
+    var max = vec[0];
+    var i = vec.length;
+    while (i--) {
+        if (vec[i] &#x3e; max)
+            max = vec[i];
+    }
+    return max;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        rowVec.push(value);
+    mat.push(rowVec);
+}
+return mat;
+};
+
+m.softmaxVec = function(vec) {
+var max = m.<span class="apidocCodeKeywordSpan">maxVec</span>(vec);
+var preSoftmaxVec = m.activateVec(vec,function(x) {return Math.exp(x - max);})
+return m.activateVec(preSoftmaxVec,function(x) {return x/ m.sumVec(preSoftmaxVec)})
+};
+
+m.softmaxMat = function(mat) {
+var result=[], i;
+for(i=0 ; i&#x3c;mat.length ; i++)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.meanMat" id="apidoc.element.dnn.math.meanMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>meanMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">meanMat = function (mat) {
+    var row = mat.length;
+    var col = mat[0].length;
+    return 1. * m.sumMat(mat) / (row * col);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.meanMatAxis" id="apidoc.element.dnn.math.meanMatAxis">
+        function <span class="apidocSignatureSpan">dnn.math.</span>meanMatAxis
+        <span class="apidocSignatureSpan">(mat, axis)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">meanMatAxis = function (mat, axis) {
+    // default axis 0;
+    // axis 0 : mean of col vector . axis 1 : mean of row vector
+    if(axis === 1) {
+        var row = m.shape(mat)[0];
+        var i ;
+        var result = [];
+        for(i=0 ; i&#x3c;row; i++)
+            result.push(m.meanVec(mat[i]));
+        return result;
+    } else {
+        mat_T = m.transpose(mat);
+        return m.meanMatAxis(mat_T,1);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var i;
+    var currentProgress = 1;
+    for(i=0;i&#x3c;epochs;i++) {
+var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var deltaY = math.minusMat(self.y,probYgivenX);
+
+var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+var deltaB = math.<span class="apidocCodeKeywordSpan">meanMatAxis</span>(deltaY,0);
+
+self.W = math.addMat(self.W,math.mulMatScalar(deltaW,lr));
+self.b = math.addVec(self.b,math.mulVecScalar(deltaB,lr));
+if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+    var progress = (1.*i/epochs)*100;
+    if(progress &#x3e; currentProgress) {
+        console.log(&#x22;LogisticRegression&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.meanVec" id="apidoc.element.dnn.math.meanVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>meanVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">meanVec = function (vec) {
+    return 1. * m.sumVec(vec) / vec.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return x*Math.log(y);
+});
+
+var b = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+    return (1-x)*Math.log(1-y);
+});
+
+var crossEntropy = -math.<span class="apidocCodeKeywordSpan">meanVec</span>(math.sumMatAxis(math.addMat(a,b),1));
+return crossEntropy;
+
+};
+
+CRBM.prototype.reconstruct = function(v) {
+var self = this;
+var reconstructedV = self.sampleVgivenH(self.sampleHgivenV(v)[0])[0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.minMat" id="apidoc.element.dnn.math.minMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>minMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minMat = function (mat) {
+    var min = mat[0][0];
+    var i = mat.length;
+    while (i--) {
+        for(var j=0;j&#x3c;mat[0].length;j++) {
+            if(mat[i][j] &#x3c; min)
+                min = mat[i][j];
+        }
+    }
+    return min;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.minVec" id="apidoc.element.dnn.math.minVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>minVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minVec = function (vec) {
+    var min = vec[0];
+    var i = vec.length;
+    while (i--) {
+        if (vec[i] &#x3c; min)
+            min = vec[i];
+    }
+    return min;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.minusMat" id="apidoc.element.dnn.math.minusMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>minusMat
+        <span class="apidocSignatureSpan">(mat1, mat2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minusMat = function (mat1, mat2) {
+    if ((mat1.length === mat2.length) &#x26;&#x26; (mat1[0].length === mat2[0].length)) {
+        var result = new Array(mat1.length);
+        for (var i = 0; i &#x3c; mat1.length; i++) {
+            result[i] = new Array(mat1[i].length);
+            for (var j = 0; j &#x3c; mat1[i].length; j++) {
+                result[i][j] = mat1[i][j] - mat2[i][j];
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x27;Matrix mismatch.&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.<span class="apidocCodeKeywordSpan">minusMat</span>(a,b);
+var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+    if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+    return x/y;
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.minusMatVec" id="apidoc.element.dnn.math.minusMatVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>minusMatVec
+        <span class="apidocSignatureSpan">(mat, vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minusMatVec = function (mat, vec) {
+    if(mat[0].length === vec.length) {
+        var result = [];
+        var i;
+        for(i=0;i&#x3c;mat.length;i++)
+            result.push(m.minusVec(mat[i],vec));
+        return result;
+    } else {
+        throw new Error(&#x22;Length Error : not same.&#x22;)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.minusVec" id="apidoc.element.dnn.math.minusVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>minusVec
+        <span class="apidocSignatureSpan">(vec1, vec2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minusVec = function (vec1, vec2) {
+    if(vec1.length === vec2.length) {
+        var result = [];
+        var i;
+        for(i=0;i&#x3c;vec1.length;i++)
+            result.push(vec1[i]-vec2[i]);
+        return result;
+    } else {
+        throw new Error(&#x22;Length Error : not same.&#x22;)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+m.minusMatVec = function(mat,vec) {
+    if(mat[0].length === vec.length) {
+        var result = [];
+        var i;
+        for(i=0;i&#x3c;mat.length;i++)
+            result.push(m.<span class="apidocCodeKeywordSpan">minusVec</span>(mat[i],vec));
+        return result;
+    } else {
+        throw new Error(&#x22;Length Error : not same.&#x22;)
+    }
+}
+
+m.addMat = function (mat1, mat2) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.mulMat" id="apidoc.element.dnn.math.mulMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>mulMat
+        <span class="apidocSignatureSpan">(mat1, mat2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mulMat = function (mat1, mat2) {
+    if (mat1[0].length === mat2.length) {
+        var result = new Array(mat1.length);
+
+        for (var x = 0; x &#x3c; mat1.length; x++) {
+            result[x] = new Array(mat2[0].length);
+        }
+
+
+        var mat2_T = m.transpose(mat2);
+        for (var i = 0; i &#x3c; result.length; i++) {
+            for (var j = 0; j &#x3c; result[i].length; j++) {
+                result[i][j] = m.dotVec(mat1[i],mat2_T[j]);
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Array mismatch&#x22;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+RBM.call(this,settings);
+};
+
+CRBM.prototype = new RBM({});
+
+CRBM.prototype.propdown = function(h) {
+var self = this;
+var preSigmoidActivation = math.addMatVec(math.<span class="apidocCodeKeywordSpan">mulMat</span>(h,math.transpose(self.W)),self.
+vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.mulMatElementWise" id="apidoc.element.dnn.math.mulMatElementWise">
+        function <span class="apidocSignatureSpan">dnn.math.</span>mulMatElementWise
+        <span class="apidocSignatureSpan">(mat1, mat2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mulMatElementWise = function (mat1, mat2) {
+    if (mat1.length === mat2.length &#x26;&#x26; mat1[0].length === mat2[0].length) {
+        var result = new Array(mat1.length);
+
+        for (var x = 0; x &#x3c; mat1.length; x++) {
+            result[x] = new Array(mat1[0].length);
+        }
+
+        for (var i = 0; i &#x3c; result.length; i++) {
+            for (var j = 0; j &#x3c; result[i].length; j++) {
+                result[i][j] = mat1[i][j] * mat2[i][j]
+            }
+        }
+        return result;
+    } else {
+        throw new Error(&#x22;Matrix shape error : not same&#x22;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var self = this;
+    var a_h = self.propdown(h0_sample);
+    var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+    var b = math.activateMat(a_h,function(x){ return 1./x ;});
+    var v1_mean = math.minusMat(a,b);
+    var U = math.randMat(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+    var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+    var d = math.activateMat(math.<span class="apidocCodeKeywordSpan">mulMatElementWise</span>(U,c),function(x) {return 1-x;});
+    var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+        if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+        return x/y;
+    })
+    return [v1_mean,v1_sample];
+};
+CRBM.prototype.getReconstructionCrossEntropy = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.mulMatScalar" id="apidoc.element.dnn.math.mulMatScalar">
+        function <span class="apidocSignatureSpan">dnn.math.</span>mulMatScalar
+        <span class="apidocSignatureSpan">(mat, scalar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mulMatScalar = function (mat, scalar) {
+    var row = m.shape(mat)[0];
+    var col = m.shape(mat)[1];
+    var i , j,result = [];
+    for(i=0 ; i&#x3c;row ; i++) {
+        var rowVec = [];
+        for(j=0 ; j&#x3c;col ; j++) {
+            rowVec.push(mat[i][j] * scalar);
+        }
+        result.push(rowVec);
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    for(i=0;i&#x3c;epochs;i++) {
+var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var deltaY = math.minusMat(self.y,probYgivenX);
+
+var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+var deltaB = math.meanMatAxis(deltaY,0);
+
+self.W = math.addMat(self.W,math.<span class="apidocCodeKeywordSpan">mulMatScalar</span>(deltaW,lr));
+self.b = math.addVec(self.b,math.mulVecScalar(deltaB,lr));
+if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+    var progress = (1.*i/epochs)*100;
+    if(progress &#x3e; currentProgress) {
+        console.log(&#x22;LogisticRegression&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+        currentProgress++;
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.mulVecScalar" id="apidoc.element.dnn.math.mulVecScalar">
+        function <span class="apidocSignatureSpan">dnn.math.</span>mulVecScalar
+        <span class="apidocSignatureSpan">(vec, scalar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mulVecScalar = function (vec, scalar) {
+    var i, result = [];
+    for(i=0;i&#x3c;vec.length;i++)
+        result.push(vec[i]*scalar);
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var probYgivenX = math.softmaxMat(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var deltaY = math.minusMat(self.y,probYgivenX);
+
+var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+var deltaB = math.meanMatAxis(deltaY,0);
+
+self.W = math.addMat(self.W,math.mulMatScalar(deltaW,lr));
+self.b = math.addVec(self.b,math.<span class="apidocCodeKeywordSpan">mulVecScalar</span>(deltaB,lr));
+if(self.settings[&#x27;log level&#x27;] &#x3e; 0) {
+    var progress = (1.*i/epochs)*100;
+    if(progress &#x3e; currentProgress) {
+        console.log(&#x22;LogisticRegression&#x22;,progress.toFixed(0),&#x22;% Completed.&#x22;);
+        currentProgress++;
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.oneMat" id="apidoc.element.dnn.math.oneMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>oneMat
+        <span class="apidocSignatureSpan">(row, col)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneMat = function (row, col) {
+    var mat = [];
+    while(mat.length &#x3c; row)
+        mat.push(m.oneVec(col));
+    return mat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.oneVec" id="apidoc.element.dnn.math.oneVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>oneVec
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneVec = function (n) {
+    var vec = [];
+    while(vec.length &#x3c; n)
+        vec.push(1);
+    return vec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    vec.push(1);
+return vec;
+};
+
+m.oneMat = function(row,col) {
+var mat = [];
+while(mat.length &#x3c; row)
+    mat.push(m.<span class="apidocCodeKeywordSpan">oneVec</span>(col));
+return mat;
+};
+
+m.randVec = function(n,lower,upper) {
+lower = (typeof lower !== &#x27;undefined&#x27;) ? lower : 0;
+upper = (typeof upper !== &#x27;undefined&#x27;) ? upper : 1;
+var vec = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.outerVec" id="apidoc.element.dnn.math.outerVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>outerVec
+        <span class="apidocSignatureSpan">(vec1, vec2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outerVec = function (vec1, vec2) {
+    var mat1 = m.transpose([vec1]);
+    var mat2 = [vec2];
+    return m.mulMat(mat1,mat2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.probToBinaryMat" id="apidoc.element.dnn.math.probToBinaryMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>probToBinaryMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">probToBinaryMat = function (mat) {
+    var row = m.shape(mat)[0];
+    var col = m.shape(mat)[1];
+    var i,j;
+    var result = [];
+
+    for(i=0;i&#x3c;row;i++) {
+        var rowVec = [];
+        for(j=0;j&#x3c;col;j++) {
+            if(Math.random() &#x3c; mat[i][j])
+                rowVec.push(1);
+            else
+                rowVec.push(0);
+        }
+        result.push(rowVec);
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+HiddenLayer.prototype.sampleHgivenV = function(input) {
+    var self = this;
+    if(typeof input !== &#x27;undefined&#x27;)
+        self.input = input;
+
+    var hMean = self.output();
+    var hSample = math.<span class="apidocCodeKeywordSpan">probToBinaryMat</span>(hMean);
+    return hSample;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.randMat" id="apidoc.element.dnn.math.randMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>randMat
+        <span class="apidocSignatureSpan">(row, col, lower, upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randMat = function (row, col, lower, upper) {
+    lower = (typeof lower !== &#x27;undefined&#x27;) ? lower : 0;
+    upper = (typeof upper !== &#x27;undefined&#x27;) ? upper : 1;
+    var mat = [];
+    while(mat.length &#x3c; row)
+        mat.push(m.randVec(col,lower,upper));
+    return mat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.<span class="apidocCodeKeywordSpan">randMat</span>(math.shape(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+    if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+    return x/y;
+})
+return [v1_mean,v1_sample];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.randVec" id="apidoc.element.dnn.math.randVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>randVec
+        <span class="apidocSignatureSpan">(n, lower, upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randVec = function (n, lower, upper) {
+    lower = (typeof lower !== &#x27;undefined&#x27;) ? lower : 0;
+    upper = (typeof upper !== &#x27;undefined&#x27;) ? upper : 1;
+    var vec = [];
+    while(vec.length &#x3c; n)
+        vec.push(lower + (upper-lower) * Math.random());
+    return vec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+m.randMat = function(row,col,lower,upper) {
+lower = (typeof lower !== &#x27;undefined&#x27;) ? lower : 0;
+upper = (typeof upper !== &#x27;undefined&#x27;) ? upper : 1;
+var mat = [];
+while(mat.length &#x3c; row)
+    mat.push(m.<span class="apidocCodeKeywordSpan">randVec</span>(col,lower,upper));
+return mat;
+};
+
+m.randnVec = function(n,mean,sigma) {
+var vec = [];
+while(vec.length &#x3c; n)
+    vec.push(mean+sigma* m.randn());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.randn" id="apidoc.element.dnn.math.randn">
+        function <span class="apidocSignatureSpan">dnn.math.</span>randn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randn = function () {
+    // generate random guassian distribution number. (mean : 0, standard deviation : 1)
+    var v1, v2, s;
+
+    do {
+        v1 = 2 * Math.random() - 1;   // -1.0 ~ 1.0 까지의 값
+        v2 = 2 * Math.random() - 1;   // -1.0 ~ 1.0 까지의 값
+        s = v1 * v1 + v2 * v2;
+    } while (s &#x3e;= 1 || s == 0);
+
+    s = Math.sqrt( (-2 * Math.log(s)) / s );
+    return v1 * s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    mat.push(m.randVec(col,lower,upper));
+return mat;
+};
+
+m.randnVec = function(n,mean,sigma) {
+var vec = [];
+while(vec.length &#x3c; n)
+    vec.push(mean+sigma* m.<span class="apidocCodeKeywordSpan">randn</span>());
+return vec;
+};
+
+m.randnMat = function(row,col,mean,sigma) {
+var mat = [];
+while(mat.length &#x3c; row)
+    mat.push(m.randnVec(col,mean,sigma));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.randnMat" id="apidoc.element.dnn.math.randnMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>randnMat
+        <span class="apidocSignatureSpan">(row, col, mean, sigma)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randnMat = function (row, col, mean, sigma) {
+    var mat = [];
+    while(mat.length &#x3c; row)
+        mat.push(m.randnVec(col,mean,sigma));
+    return mat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.randnVec" id="apidoc.element.dnn.math.randnVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>randnVec
+        <span class="apidocSignatureSpan">(n, mean, sigma)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randnVec = function (n, mean, sigma) {
+    var vec = [];
+    while(vec.length &#x3c; n)
+        vec.push(mean+sigma* m.randn());
+    return vec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    vec.push(mean+sigma* m.randn());
+return vec;
+};
+
+m.randnMat = function(row,col,mean,sigma) {
+var mat = [];
+while(mat.length &#x3c; row)
+    mat.push(m.<span class="apidocCodeKeywordSpan">randnVec</span>(col,mean,sigma));
+return mat;
+};
+
+m.identity = function (n) {
+var result = new Array(n);
+
+for (var i = 0; i &#x3c; n ; i++) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.shape" id="apidoc.element.dnn.math.shape">
+        function <span class="apidocSignatureSpan">dnn.math.</span>shape
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shape = function (mat) {
+    var row = mat.length;
+    var col = mat[0].length;
+    return [row,col];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+var b = math.activateMat(a_h,function(x){ return 1./x ;});
+var v1_mean = math.minusMat(a,b);
+var U = math.randMat(math.<span class="apidocCodeKeywordSpan">shape</span>(v1_mean)[0],math.shape(v1_mean)[1],0,1);
+var c = math.activateMat(a_h,function(x) { return 1 - Math.exp(x);});
+var d = math.activateMat(math.mulMatElementWise(U,c),function(x) {return 1-x;});
+var v1_sample = math.activateTwoMat(math.activateMat(d,Math.log),a_h,function(x,y) {
+    if(y==0) y += 1e-14; // Javascript Float Precision Problem.. This is a limit of javascript.
+    return x/y;
+})
+return [v1_mean,v1_sample];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.sigmoid" id="apidoc.element.dnn.math.sigmoid">
+        function <span class="apidocSignatureSpan">dnn.math.</span>sigmoid
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sigmoid = function (x) {
+    var sigmoid = (1. / (1 + Math.exp(-x)))
+    if(sigmoid ==1) {
+     //   console.warn(&#x22;Something Wrong!! Sigmoid Function returns 1. Probably javascript float precision problem?\nSlightly Controlled
+ value to 1 - 1e-14&#x22;)
+        sigmoid = 0.99999999999999; // Javascript Float Precision Problem.. This is a limit of javascript.
+    } else if(sigmoid ==0) {
+      //  console.warn(&#x22;Something Wrong!! Sigmoid Function returns 0. Probably javascript float precision problem?\nSlightly Controlled
+ value to 1e-14&#x22;)
+        sigmoid = 1e-14;
+    }
+    return sigmoid; // sigmoid cannot be 0 or 1;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  //  console.warn(&#x22;Something Wrong!! Sigmoid Function returns 0. Probably javascript float precision problem?\nSlightly Controlled
+ value to 1e-14&#x22;)
+    sigmoid = 1e-14;
+}
+return sigmoid; // sigmoid cannot be 0 or 1;;
+};
+
+m.dSigmoid = function(x){
+a = m.<span class="apidocCodeKeywordSpan">sigmoid</span>(x);
+return a * (1. - a);
+};
+
+m.probToBinaryMat = function(mat) {
+var row = m.shape(mat)[0];
+var col = m.shape(mat)[1];
+var i,j;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.softmaxMat" id="apidoc.element.dnn.math.softmaxMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>softmaxMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softmaxMat = function (mat) {
+    var result=[], i;
+    for(i=0 ; i&#x3c;mat.length ; i++)
+        result.push(m.softmaxVec(mat[i]));
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if(typeof settings[&#x27;lr&#x27;] !== &#x27;undefined&#x27;)
+lr = settings[&#x27;lr&#x27;];
+    if(typeof settings[&#x27;epochs&#x27;] !== &#x27;undefined&#x27;)
+epochs = settings[&#x27;epochs&#x27;];
+    var i;
+    var currentProgress = 1;
+    for(i=0;i&#x3c;epochs;i++) {
+var probYgivenX = math.<span class="apidocCodeKeywordSpan">softmaxMat</span>(math.addMatVec(math.mulMat(self.x,self.W),self.b));
+var deltaY = math.minusMat(self.y,probYgivenX);
+
+var deltaW = math.mulMat(math.transpose(self.x),deltaY);
+var deltaB = math.meanMatAxis(deltaY,0);
+
+self.W = math.addMat(self.W,math.mulMatScalar(deltaW,lr));
+self.b = math.addVec(self.b,math.mulVecScalar(deltaB,lr));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.softmaxVec" id="apidoc.element.dnn.math.softmaxVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>softmaxVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softmaxVec = function (vec) {
+    var max = m.maxVec(vec);
+    var preSoftmaxVec = m.activateVec(vec,function(x) {return Math.exp(x - max);})
+    return m.activateVec(preSoftmaxVec,function(x) {return x/ m.sumVec(preSoftmaxVec)})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var preSoftmaxVec = m.activateVec(vec,function(x) {return Math.exp(x - max);})
+    return m.activateVec(preSoftmaxVec,function(x) {return x/ m.sumVec(preSoftmaxVec)})
+};
+
+m.softmaxMat = function(mat) {
+    var result=[], i;
+    for(i=0 ; i&#x3c;mat.length ; i++)
+        result.push(m.<span class="apidocCodeKeywordSpan">softmaxVec</span>(mat[i]));
+    return result;
+};
+
+
+
+// For CRBM
+/*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.squareMat" id="apidoc.element.dnn.math.squareMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>squareMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">squareMat = function (mat) {
+    var squareMat = [];
+    var i;
+    for(i=0;i&#x3c;mat.length;i++) {
+        squareMat.push(m.squareVec(mat[i]));
+    }
+    return squareMat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.squareVec" id="apidoc.element.dnn.math.squareVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>squareVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">squareVec = function (vec) {
+    var squareVec = [];
+    var i;
+    for(i=0;i&#x3c;vec.length;i++) {
+        squareVec.push(vec[i]*vec[i]);
+    }
+    return squareVec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return squareVec;
+};
+
+m.squareMat = function(mat) {
+var squareMat = [];
+var i;
+for(i=0;i&#x3c;mat.length;i++) {
+    squareMat.push(m.<span class="apidocCodeKeywordSpan">squareVec</span>(mat[i]));
+}
+return squareMat;
+};
+
+m.minVec = function(vec) {
+var min = vec[0];
+var i = vec.length;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.sumMat" id="apidoc.element.dnn.math.sumMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>sumMat
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sumMat = function (mat) {
+    var sum = 0;
+    var i = mat.length;
+    while (i--) {
+        for(var j=0;j&#x3c;mat[0].length;j++)
+          sum += mat[i][j];
+    }
+    return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+m.meanVec = function(vec) {
+return 1. * m.sumVec(vec) / vec.length;
+};
+
+m.meanMat = function(mat) {
+var row = mat.length;
+var col = mat[0].length;
+return 1. * m.<span class="apidocCodeKeywordSpan">sumMat</span>(mat) / (row * col);
+};
+
+m.meanMatAxis = function(mat,axis) {
+// default axis 0;
+// axis 0 : mean of col vector . axis 1 : mean of row vector
+if(axis === 1) {
+    var row = m.shape(mat)[0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.sumMatAxis" id="apidoc.element.dnn.math.sumMatAxis">
+        function <span class="apidocSignatureSpan">dnn.math.</span>sumMatAxis
+        <span class="apidocSignatureSpan">(mat, axis)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sumMatAxis = function (mat, axis) {
+    // default axis 0;
+    // axis 0 : mean of col vector . axis 1 : mean of row vector
+    if(axis === 1) {
+        var row = m.shape(mat)[0];
+        var i ;
+        var result = [];
+        for(i=0 ; i&#x3c;row; i++)
+            result.push(m.sumVec(mat[i]));
+        return result;
+    } else {
+        mat_T = m.transpose(mat);
+        return m.sumMatAxis(mat_T,1);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return x*Math.log(y);
+});
+
+var b = math.activateTwoMat(self.input,reconstructedV,function(x,y){
+    return (1-x)*Math.log(1-y);
+});
+
+var crossEntropy = -math.meanVec(math.<span class="apidocCodeKeywordSpan">sumMatAxis</span>(math.addMat(a,b),1));
+return crossEntropy;
+
+};
+
+CRBM.prototype.reconstruct = function(v) {
+var self = this;
+var reconstructedV = self.sampleVgivenH(self.sampleHgivenV(v)[0])[0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.sumVec" id="apidoc.element.dnn.math.sumVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>sumVec
+        <span class="apidocSignatureSpan">(vec)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sumVec = function (vec) {
+    var sum = 0;
+    var i = vec.length;
+    while (i--) {
+        sum += vec[i];
+    }
+    return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // default axis 0;
+    // axis 0 : mean of col vector . axis 1 : mean of row vector
+    if(axis === 1) {
+        var row = m.shape(mat)[0];
+        var i ;
+        var result = [];
+        for(i=0 ; i&#x3c;row; i++)
+            result.push(m.<span class="apidocCodeKeywordSpan">sumVec</span>(mat[i]));
+        return result;
+    } else {
+        mat_T = m.transpose(mat);
+        return m.sumMatAxis(mat_T,1);
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.transpose" id="apidoc.element.dnn.math.transpose">
+        function <span class="apidocSignatureSpan">dnn.math.</span>transpose
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transpose = function (mat) {
+    var result = new Array(mat[0].length);
+    for (var i = 0; i &#x3c; mat[0].length; i++) {
+        result[i] = new Array(mat.length);
+        for (var j = 0; j &#x3c; mat.length; j++) {
+            result[i][j] = mat[j][i];
+        }
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+RBM.call(this,settings);
+};
+
+CRBM.prototype = new RBM({});
+
+CRBM.prototype.propdown = function(h) {
+var self = this;
+var preSigmoidActivation = math.addMatVec(math.mulMat(h,math.<span class="apidocCodeKeywordSpan">transpose</span>(self.W)),self.
+vbias);
+return preSigmoidActivation;
+};
+
+CRBM.prototype.sampleVgivenH = function(h0_sample) {
+var self = this;
+var a_h = self.propdown(h0_sample);
+var a = math.activateMat(a_h,function(x) { return 1. / (1-Math.exp(-x)) ; });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.zeroMat" id="apidoc.element.dnn.math.zeroMat">
+        function <span class="apidocSignatureSpan">dnn.math.</span>zeroMat
+        <span class="apidocSignatureSpan">(row, col)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zeroMat = function (row, col) {
+    var mat = [];
+    while(mat.length &#x3c; row)
+        mat.push(m.zeroVec(col));
+    return mat;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Created by joonkukang on 2014. 1. 12..
+ */
+var math = require(&#x27;./utils&#x27;).math;
+LogisticRegression = module.exports = function (settings) {
+    var self = this;
+    self.x = settings[&#x27;input&#x27;];
+    self.y = settings[&#x27;label&#x27;];
+    self.W = math.<span class="apidocCodeKeywordSpan">zeroMat</span>(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;]);
+    self.b = math.zeroVec(settings[&#x27;n_out&#x27;]);
+    self.settings = {
+        &#x27;log level&#x27; : 1 // 0 : nothing, 1 : info, 2: warn
+    };
+};
+
+LogisticRegression.prototype.train = function (settings) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnn.math.zeroVec" id="apidoc.element.dnn.math.zeroVec">
+        function <span class="apidocSignatureSpan">dnn.math.</span>zeroVec
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zeroVec = function (n) {
+    var vec = [];
+    while(vec.length &#x3c; n)
+        vec.push(0);
+    return vec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    self.input = settings[&#x27;input&#x27;];
+
+    if(typeof settings[&#x27;W&#x27;] === &#x27;undefined&#x27;) {
+        var a = 1. / settings[&#x27;n_in&#x27;];
+        settings[&#x27;W&#x27;] = math.randMat(settings[&#x27;n_in&#x27;],settings[&#x27;n_out&#x27;],-a,a);
+    }
+    if(typeof settings[&#x27;b&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;b&#x27;] = math.<span class="apidocCodeKeywordSpan">zeroVec</span>(settings[&#x27;n_out&#x27;]);
+    if(typeof settings[&#x27;activation&#x27;] === &#x27;undefined&#x27;)
+        settings[&#x27;activation&#x27;] = math.sigmoid;
+
+    self.W = settings[&#x27;W&#x27;];
+    self.b = settings[&#x27;b&#x27;];
+    self.activation = settings[&#x27;activation&#x27;];
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
